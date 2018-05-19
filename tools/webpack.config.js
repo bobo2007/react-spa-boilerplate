@@ -75,8 +75,11 @@ const config = {
     // Emit a JSON file with assets paths
     // https://github.com/sporto/assets-webpack-plugin#options
     new AssetsPlugin({
+      // Path where to save the created JSON file
       path: path.resolve(__dirname, '../public/dist'),
+      // Name for the created JSON file
       filename: 'assets.json',
+      // Whether to format the JSON output for readability
       prettyPrint: true,
     }),
     new webpack.LoaderOptionsPlugin({
